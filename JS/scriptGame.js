@@ -9,11 +9,13 @@ function init() {
 function revealImage(eventObject) {
     let image = eventObject.target; // the target tells what element generated the event
         image.style.filter = "none";
-        setTimeout(timerHandler, 10000);
+        setTimeout(brightnessOut, 3000, image);
 }
 
-function timerHandler() {
-    for(let i = 0; i < images.length; i++) {
-        images[i].style.filter = "brightness(0%)";
-    }
+function brightnessOut(image) {
+    let name;
+    name = image.style.filter = "brightness(0%)";
+    // for(let i = 0; i < images.length; i++) {
+    //     images[i].style.filter = "brightness(0%)";
+    // }
 }
