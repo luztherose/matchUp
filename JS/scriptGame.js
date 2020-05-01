@@ -2,6 +2,8 @@ let images = document.getElementsByTagName("img");
 let toggleButton = document.getElementById("toggleButton");
 let heading = document.querySelector("h1");
 let audioSound = document.getElementById("myAudio");
+const defaultColor = "rgb(240, 11, 11)";
+
 window.onload = init;
 function init() {
     let images = document.getElementsByTagName("img");
@@ -26,7 +28,7 @@ function revealImages() {
         images[i].style.filter = "none";
     }
     toggleButton.innerHTML = "Hide Images";
-    heading.style.color="rgb(240, 11, 11)";
+    heading.style.color= defaultColor;
 }
 function hideImages() {
     toggleButton.innerHTML = "Reveal Images";
@@ -36,7 +38,7 @@ function hideImages() {
     }
 }
 toggleButton.addEventListener("click", () => {
-    if (heading.style.color != "rgb(240, 11, 11)") {
+    if (heading.style.color != defaultColor ) {
         revealImages();
     } else {
         hideImages();

@@ -13,7 +13,7 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 body {
     background-color: silver;
 }
-.center {
+.center, h1 {
     text-align: center;
 }
 .center:first-child {
@@ -27,7 +27,6 @@ img {
 h1 {
     font-family: cursive;
     color: rgb(240, 11, 11);
-    text-align: center;
     font-weight: bolder;
 }
 .center button {
