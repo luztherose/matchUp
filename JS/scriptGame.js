@@ -34,7 +34,7 @@ function hideImages() {
     toggleButton.innerHTML = "Reveal Images";
     heading.style.color="";
     for(let i = 0; i < images.length; i++) {
-        images[i].style.filter = "brightness(0%";
+        images[i].style.filter = "brightness(0%)";
     }
 }
 toggleButton.addEventListener("click", () => {
