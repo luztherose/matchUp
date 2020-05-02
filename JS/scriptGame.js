@@ -2,7 +2,9 @@ let images = document.getElementsByTagName("img");
 let toggleButton = document.getElementById("toggleButton");
 let heading = document.querySelector("h1");
 let audioSound = document.getElementById("myAudio");
+let bodyTag = document.querySelector("body");
 const defaultColor = "rgb(240, 11, 11)";
+const bodyBackgroundColor = "#333";
 
 window.onload = init;
 function init() {
@@ -29,10 +31,12 @@ function revealImages() {
     }
     toggleButton.innerHTML = "Hide Images";
     heading.style.color= defaultColor;
+    bodyTag.style.backgroundColor = bodyBackgroundColor;
 }
 function hideImages() {
     toggleButton.innerHTML = "Reveal Images";
     heading.style.color="";
+    bodyTag.style.backgroundColor="";
     for(let i = 0; i < images.length; i++) {
         images[i].style.filter = "brightness(0%)";
     }
