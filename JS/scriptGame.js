@@ -7,8 +7,18 @@ let bodyTag = document.querySelector("body");
 const defaultColor = "rgb(240, 11, 11)";
 const bodyBackgroundColor = "#333";
 let firstImageClicked; 
+let arrayOfImages = [];
 
 window.onload = init;
+
+for(let i = 0; i < images.length; i++) {
+    arrayOfImages .push(images[i].src);
+}
+arrayOfImages  = randomizeArray(arrayOfImages);
+
+for(let i = 0; i < images.length; i++) {
+    images[i].src = arrayOfImages[i];
+}
 
 function init() {
     let images = document.getElementsByTagName("img");
@@ -67,11 +77,17 @@ toggleButton.addEventListener("click", () => {
     }
 });
 
-// 1) Reveal first image
-// Store the first image 
-// 2) Reveal a second image
-// Store the second  image 
-// 3) Compare first and second images 
-// if they are equal both images stay revealed 
-// else both images get closed
+// show the images randomly
+function randomizeArray(origalArray) {
+    let array = [...origalArray];
+    let randomArray = [];
+    for (var i = 0; i < images.length; i++) {
+        var randomIndex = Math.floor(Math.random() * ( array.length));
+        randomArray.push( array[randomIndex]);
+        array.splice(randomIndex, 1);
+    }
+return randomArray
+}
+    
+
 
