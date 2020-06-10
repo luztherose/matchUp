@@ -38,3 +38,15 @@ h1 {
     background-color: rgb(240, 11, 11) ;
     color: white;
 }
+#addReviews {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#addReviews a {
+    font-family: sans-serif;
+    font-size: 1.5em;
+    color:blue;
+    background-color: rgb(235, 233, 233);
+    padding: 10px;
+    border-radius: 5px;
+}
