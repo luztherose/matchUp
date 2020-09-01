@@ -9,13 +9,21 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
 /* //////////////////////////////////////////////////////////////// */
-
+html {
+    font-size: 62.5%;
+}
 body {
     background-color: silver;
 }
-.center, h1 {
-    text-align: center;
+.parentContainer,
+.buttonsContainer {
+    display: flex;
+    justify-content: center;
 }
+.buttonsContainer {
+    flex-direction: column;
+}
+
 .center:first-child {
     margin-top: 3%;
 }
@@ -24,29 +32,71 @@ img {
     filter: brightness(0%);
     cursor: pointer;
 }
+header {
+    margin: 50px 0;
+    text-align: center;
+    margin-left: -150px;
+}
 h1 {
     font-family: cursive;
+    font-size: 5rem;
     color: rgb(240, 11, 11);
     font-weight: bolder;
 }
+button,
+.reviewsLink {
+    background-color: rgb(240, 11, 11);
+    color: white;
+    font-size: 2rem;
+    border-radius: 5px;
+    transition: 0.5s;
+    cursor: pointer;
+}
 .center button {
     padding: 20px;
+    margin: 10px 20px 20px 20px;
+    border-style: none;
+}
+.center button:hover, 
+.reviewsLink:hover {
+    background-color:orangered ;
+    border: outset white;
+}
+.reviewsLink {
+    margin: 40px 20px;
+    display: inline-block;
+    padding: 20px 45px;
     margin-top: 10px;
-    border-radius: 5px;
-}
-.center button:hover {
-    background-color: rgb(240, 11, 11) ;
-    color: white;
-}
-#addReviews {
-    margin-top: 20px;
-    margin-bottom: 20px;
-}
-#addReviews a {
     font-family: sans-serif;
-    font-size: 1.5em;
-    color:blue;
-    background-color: rgb(235, 233, 233);
-    padding: 10px;
-    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+}
+
+/* ///////////////////////////////////////////////// */
+@media(max-width:1024px) {
+    h1 {
+        font-size: 4rem;
+    }
+    .parentContainer {
+        flex-direction: column;
+    }
+    .buttonsContainer {
+    width: 50%;
+    text-align: center;
+}
+    .imagesContainer,
+    .buttonsContainer{
+        margin:0 auto;
+    }
+    header {
+        margin-left: 0;
+    }
+}
+@media(max-width:485px) {
+    .buttonsContainer {
+    width: 90%;
+    }
+    .imagesContainer {
+        padding-left:2.6rem;
+    }
 }
