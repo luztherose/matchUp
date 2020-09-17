@@ -22,6 +22,7 @@ body {
 }
 .buttonsContainer {
     flex-direction: column;
+    margin-left: 20px;
 }
 
 .center:first-child {
@@ -71,7 +72,50 @@ button,
     color: white;
     text-decoration: none;
 }
-
+/* Footer */
+.socialMedia ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 23px;
+}
+.socialMedia ul li {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    padding-top:15px;
+    padding-left:15px ;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+footer {
+    background-color: white;
+    padding: 40px;
+    margin-top: 30px;
+    text-align: center;
+}
+footer h2 {
+    display: inline-block;
+    font-size: 30px;
+    border-bottom: 2px solid rgb(240, 11, 11);
+}
+.socialMedia ul a {
+    padding: 20px;
+    text-decoration: none;
+    padding-left:0 ;
+    color: rgb(240, 11, 11);
+    transition: 0.5s;
+}
+.socialMedia ul li:hover {
+    background-color: transparent;
+    border: outset black;
+}
+.socialMedia ul a:hover {
+    color:orangered;
+    font-size: 25px;
+}
 /* ///////////////////////////////////////////////// */
 @media(max-width:1024px) {
     h1 {
