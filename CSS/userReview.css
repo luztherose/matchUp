@@ -3,12 +3,18 @@
     padding: 0;
     font-family: 'Work Sans', 'Open Sans', sans-serif;
 }
-
+.wrapper {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
+}
 body {
     background-color: #fff;
     margin: 30px;
 }
-
+header {
+    padding-top: 40px;
+}
 h1, h2 {
     margin-bottom: 30px;
 }
@@ -68,11 +74,13 @@ ul {
     list-style-type: none;
 }
 
-.section {
-    float: left;
-    width: 48%;
+main {
+    display: flex;
 }
-
+.firstSection {
+    width: 50%;
+    margin-right: 3%;
+}
 .review {
     padding-bottom: 15px;
 }
@@ -86,4 +94,18 @@ ul {
     background: #537d7b;
     border-radius: 5px;
     color: white;
+}
+/* /////////////////////////////////////////////////////// */
+/* Media Queries
+/* /////////////////////////////////////////////////////// */
+
+@media(max-width: 1024px) {
+    main {
+        flex-direction: column;
+        justify-content: center;
+    }
+    .firstSection {
+        width: 100%;
+        margin-bottom: 50px;
+    }
 }
