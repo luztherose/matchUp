@@ -91,7 +91,7 @@ button,
     transition: 0.5s;
 }
 footer {
-    background-color: white;
+    background-color: rgb(245, 245, 244);
     padding: 40px;
     margin-top: 30px;
     text-align: center;

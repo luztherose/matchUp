@@ -48,10 +48,6 @@ input, textarea {
     background-color: #f6f8f8;
 }
 
-#userReviewInput {
-    height: 100px;
-}
-
 button {
     background: #537d7b;
     border: none;
@@ -76,6 +72,7 @@ ul {
 
 main {
     display: flex;
+    height: 100vh;
 }
 .firstSection {
     width: 50%;
@@ -85,15 +82,60 @@ main {
     padding-bottom: 15px;
 }
 
-.review, #flashMessage {
+.review, 
+.flashMessageStyle{
     display: none;
 }
 
-#flashMessage {
+.flashMessageStyle{
     padding: 10px;
     background: #537d7b;
     border-radius: 5px;
     color: white;
+}
+/* /////////////// */
+footer {
+    background-color: rgb(245, 245, 244);
+    padding: 40px;
+    margin-top: 30px;
+    text-align: center;
+}
+.socialMedia ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    font-size: 23px;
+}
+.socialMedia ul li {
+    width: 50px;
+    height: 50px;
+    background-color: black;
+    text-align: center;
+    padding-top:15px;
+    padding-left:15px ;
+    border-radius: 5px;
+    margin-right: 20px;
+    transition: 0.5s;
+}
+footer h2 {
+    display: inline-block;
+    font-size: 30px;
+    border-bottom: 2px solid rgb(240, 11, 11);
+}
+.socialMedia ul a {
+    padding: 20px;
+    text-decoration: none;
+    padding-left:0 ;
+    color: rgb(240, 11, 11);
+    transition: 0.5s;
+}
+.socialMedia ul li:hover {
+    background-color: transparent;
+    border: outset black;
+}
+.socialMedia ul a:hover {
+    color:orangered;
+    font-size: 25px;
 }
 /* /////////////////////////////////////////////////////// */
 /* Media Queries
