@@ -12,17 +12,23 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 html {
     font-size: 62.5%;
 }
-body {
-    background-color: silver;
+.wrapper {
+    max-width: 1200px;
+    width: 95%;
+    margin: 0 auto;
 }
-.parentContainer,
+.parentContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.imagesContainer {
+    margin: 0 auto;
+    margin-bottom:50px ;
+}
 .buttonsContainer {
     display: flex;
     justify-content: center;
-}
-.buttonsContainer {
-    flex-direction: column;
-    margin-left: 20px;
 }
 
 .center:first-child {
@@ -34,9 +40,10 @@ img {
     cursor: pointer;
 }
 header {
-    margin: 50px 0;
     text-align: center;
-    margin-left: -150px;
+    background-color: rgb(245, 245, 244);
+    padding: 30px;
+    margin:50px 0;
 }
 h1 {
     font-family: cursive;
@@ -46,8 +53,11 @@ h1 {
 }
 button,
 .reviewsLink {
+    width: 200px;
+    height: 70px;
     background-color: rgb(240, 11, 11);
     color: white;
+    font-weight: bold;
     font-size: 2rem;
     border-radius: 5px;
     transition: 0.5s;
@@ -60,8 +70,9 @@ button,
 }
 .center button:hover, 
 .reviewsLink:hover {
-    background-color:orangered ;
-    border: outset white;
+    background-color:transparent;
+    color:rgb(240, 11, 11);
+    border: outset black;
 }
 .reviewsLink {
     margin: 40px 20px;
@@ -71,6 +82,7 @@ button,
     font-family: sans-serif;
     color: white;
     text-decoration: none;
+    text-align: center;
 }
 /* Footer */
 .socialMedia ul {
@@ -127,9 +139,10 @@ footer h2 {
     .buttonsContainer {
     width: 50%;
     text-align: center;
+    flex-direction: column;
 }
     .imagesContainer,
-    .buttonsContainer{
+    .buttonsContainer {
         margin:0 auto;
     }
     header {
