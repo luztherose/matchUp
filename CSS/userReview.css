@@ -8,9 +8,13 @@
     width: 95%;
     margin: 0 auto;
 }
+html {
+    font-size: 62.5%;
+}
 body {
     background-color: #fff;
     margin: 30px;
+    font-size: 2rem;
 }
 header {
     background-color: rgb(245, 245, 244);
@@ -25,6 +29,10 @@ h1 {
     color: #333;
     background-color: rgb(245, 245, 244);
     padding: 20px;
+    font-size: 5.5rem;
+}
+h2 {
+    font-size: 4rem;
 }
 h3 {
     color: #537d7b;
@@ -121,7 +129,6 @@ footer {
 }
 footer h2 {
     display: inline-block;
-    font-size: 30px;
     border-bottom: 2px solid rgb(240, 11, 11);
 }
 .socialMedia ul a {
@@ -146,10 +153,25 @@ footer h2 {
 @media(max-width: 1024px) {
     main {
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
     }
     .firstSection {
         width: 100%;
         margin-bottom: 50px;
+    }
+    h1 {
+        font-size: 4.5rem;
+    }
+}
+@media(max-width:485px) {
+    h1 {
+        font-size: 3rem;
+        padding: 20px 0;
+    }
+    h2 {
+        font-size: 2.6rem;
+    }
+    header {
+        margin-top: 0;
     }
 }

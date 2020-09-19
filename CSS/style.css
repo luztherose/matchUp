@@ -133,13 +133,22 @@ footer h2 {
     h1 {
         font-size: 4rem;
     }
-    .parentContainer {
-        flex-direction: column;
-    }
     .buttonsContainer {
-    width: 50%;
+    width: 300px;
     text-align: center;
     flex-direction: column;
+    margin: 0 auto;
+    justify-content: center;
+    align-content: center;
+}
+.center button,
+.reviewsLink {
+    margin: 10px 0;
+    
+}
+button,
+.reviewsLink  {
+    width: 100%;
 }
     .imagesContainer,
     .buttonsContainer {
@@ -150,8 +159,11 @@ footer h2 {
     }
 }
 @media(max-width:485px) {
+    header {
+        margin-top: 0;
+    }
     .buttonsContainer {
-    width: 90%;
+    width: 88%;
     }
     .imagesContainer {
         padding-left:2.6rem;
