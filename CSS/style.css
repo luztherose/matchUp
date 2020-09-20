@@ -8,7 +8,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 
 .sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
 
-/* //////////////////////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////// */
+/* STYLE STARTS HERE
+/* /////////////////////////////////////////////////////// */
+
 html {
     font-size: 62.5%;
 }
@@ -30,7 +33,6 @@ html {
     display: flex;
     justify-content: center;
 }
-
 .center:first-child {
     margin-top: 3%;
 }
@@ -84,7 +86,10 @@ button,
     text-decoration: none;
     text-align: center;
 }
-/* Footer */
+/* /////////////////////////////////////////////////////// */
+/* FOOTER
+/* /////////////////////////////////////////////////////// */
+
 .socialMedia ul {
     display: flex;
     justify-content: center;
@@ -128,28 +133,31 @@ footer h2 {
     color:orangered;
     font-size: 25px;
 }
-/* ///////////////////////////////////////////////// */
+/* /////////////////////////////////////////////////////// */
+/* Media Queries
+/* /////////////////////////////////////////////////////// */
+
 @media(max-width:1024px) {
     h1 {
         font-size: 4rem;
     }
     .buttonsContainer {
-    width: 300px;
-    text-align: center;
-    flex-direction: column;
-    margin: 0 auto;
-    justify-content: center;
-    align-content: center;
-}
-.center button,
-.reviewsLink {
-    margin: 10px 0;
-    
-}
-button,
-.reviewsLink  {
-    width: 100%;
-}
+        width: 300px;
+        text-align: center;
+        flex-direction: column;
+        margin: 0 auto;
+        justify-content: center;
+        align-content: center;
+    }
+    .center button,
+    .reviewsLink {
+        margin: 10px 0;
+        
+    }
+    button,
+    .reviewsLink  {
+        width: 100%;
+    }
     .imagesContainer,
     .buttonsContainer {
         margin:0 auto;
