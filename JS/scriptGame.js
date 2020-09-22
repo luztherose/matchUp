@@ -5,7 +5,6 @@ let audioSound = document.getElementById("myAudio");
 let matchSound = document.getElementById("matchSound");
 let bodyTag = document.querySelector("body");
 const defaultColor = "rgb(240, 11, 11)";
-const bodyBackgroundColor = "#333";
 let firstImageClicked; 
 let arrayOfImages = [];
 
@@ -30,7 +29,7 @@ function init() {
 function revealImage(eventObject) {
     let clikedImage = eventObject.target; // the target tells what element generated the event
     clikedImage.style.filter = "none";
-    
+    clikedImage.classList.add("flipImg");
     let myFunction = function(){
         if (firstImageClicked == undefined) {
             firstImageClicked = clikedImage;
@@ -51,6 +50,7 @@ function revealImage(eventObject) {
 
 function brightnessOut(image) {
     image.style.filter = "brightness(0%)";
+    image.classList.remove("flipImg");
 }
 
 function revealImages() {
@@ -58,8 +58,8 @@ function revealImages() {
         images[i].style.filter = "none";
     }
     toggleButton.innerHTML = "Hide Images";
-    heading.style.color= defaultColor;
-    bodyTag.style.backgroundColor = bodyBackgroundColor;
+    heading.style.color = defaultColor;
+    //bodyTag.style.backgroundColor = bodyBackgroundColor;
 }
 function hideImages() {
     toggleButton.innerHTML = "Reveal Images";
@@ -81,8 +81,8 @@ toggleButton.addEventListener("click", () => {
 function randomizeArray(origalArray) {
     let array = [...origalArray];
     let randomArray = [];
-    for (var i = 0; i < images.length; i++) {
-        var randomIndex = Math.floor(Math.random() * ( array.length));
+    for (let i = 0; i < images.length; i++) {
+        let randomIndex = Math.floor(Math.random() * ( array.length));
         randomArray.push( array[randomIndex]);
         array.splice(randomIndex, 1);
     }

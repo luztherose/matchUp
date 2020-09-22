@@ -20,6 +20,10 @@ html {
     width: 95%;
     margin: 0 auto;
 }
+body {
+    font-size: 2rem;
+    color:#333;
+}
 .parentContainer {
     display: flex;
     flex-direction: column;
@@ -40,7 +44,13 @@ img {
     width: 150px;
     filter: brightness(0%);
     cursor: pointer;
+    border: 2px solid black;
+    transition: 0.5s;
 }
+.flipImg {
+    transform: scaleX(-1);
+}
+
 header {
     text-align: center;
     background-color: rgb(245, 245, 244);
@@ -48,10 +58,27 @@ header {
     margin:50px 0;
 }
 h1 {
-    font-family: cursive;
+    font-family: 'Press Start 2P', cursive;
     font-size: 5rem;
-    color: rgb(240, 11, 11);
+    color: #333;
     font-weight: bolder;
+}
+.instrutions {
+    text-align: center;
+}
+.borderSpan {
+    border-bottom:2px solid rgb(240, 11, 11);
+}
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+.brain {
+    display: inline-block;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    text-align: center;
+    padding-top:7px ;
+    box-shadow: 5px 10px 18px #333;
+    animation:spin 4s linear infinite;
 }
 button,
 .reviewsLink {
