@@ -11,7 +11,10 @@ html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: 
 /* /////////////////////////////////////////////////////// */
 /* STYLE STARTS HERE
 /* /////////////////////////////////////////////////////// */
-
+:root {
+    --primaryBackgroundColor:rgb(245, 245, 244);
+    --socialIconsColor:rgb(240, 11, 11);
+}
 html {
     font-size: 62.5%;
 }
@@ -53,7 +56,7 @@ img {
 
 header {
     text-align: center;
-    background-color: rgb(245, 245, 244);
+    background-color:var(--primaryBackgroundColor);
     padding: 30px;
     margin:50px 0;
 }
@@ -67,7 +70,7 @@ h1 {
     text-align: center;
 }
 .borderSpan {
-    border-bottom:2px solid rgb(240, 11, 11);
+    border-bottom:2px solid var(--socialIconsColor);
 }
 @keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
 .brain {
@@ -84,7 +87,7 @@ button,
 .reviewsLink {
     width: 200px;
     height: 70px;
-    background-color: rgb(240, 11, 11);
+    background-color: var(--socialIconsColor);
     color: white;
     font-weight: bold;
     font-size: 2rem;
@@ -100,7 +103,7 @@ button,
 .center button:hover, 
 .reviewsLink:hover {
     background-color:transparent;
-    color:rgb(240, 11, 11);
+    color:var(--socialIconsColor);
     border: outset black;
 }
 .reviewsLink {
@@ -135,7 +138,7 @@ button,
     transition: 0.5s;
 }
 footer {
-    background-color: rgb(245, 245, 244);
+    background-color: var(--primaryBackgroundColor);
     padding: 40px;
     margin-top: 30px;
     text-align: center;
@@ -143,13 +146,13 @@ footer {
 footer h2 {
     display: inline-block;
     font-size: 30px;
-    border-bottom: 2px solid rgb(240, 11, 11);
+    border-bottom: 2px solid var(--socialIconsColor);
 }
 .socialMedia ul a {
     padding: 20px;
     text-decoration: none;
     padding-left:0 ;
-    color: rgb(240, 11, 11);
+    color: var(--socialIconsColor);
     transition: 0.5s;
 }
 .socialMedia ul li:hover {
